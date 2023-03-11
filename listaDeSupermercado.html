@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Supermercado</title>
+</head>
+<body>
+    <style>
+        *{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    
+    
+}
+header{
+    text-shadow: 2px 2px 2px blue;
+    background-color: aqua;
+    box-shadow: 3px 3px 3px rgb(4, 122, 122);
+    padding: 10px;
+    color: white;
+   
+    
+}header h2{
+    text-align: center;
+    flex-wrap: wrap;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.listaCadastro{
+    margin-top: 1%;
+    display: flex;
+    flex-wrap: wrap;
+}.listaCadastro input[type=text]{ /*estilizando os unputs igualmente, caso queira editar separadamente, criar um ID e chama-lo com #*/
+    border-radius: 5px;
+    font-size: 15px;
+    flex: 1;
+    height: 30px;
+}.listaCadastro input[type=submit]{
+    border-radius: 5px;
+    font-weight: bolder;
+    margin-left: 1px;
+}.listaCadastro input[type=submit]:hover{
+    background: yellow;
+    box-shadow: 2px 2px 2px rgb(1, 71, 1);
+}.listaCadastro input[type=submit]:active{
+    background: green;
+    margin-top: 2px;
+}.listaCadastro input[type=number]{
+    border-radius: 5px;
+    font-size: 15px;
+    width: 80px;
+    height: 30px;
+}
+.listaProdutoSingle{
+    border-bottom: 1px solid black;
+    padding: 10px 0;
+    display: flex;
+
+}.listaProdutoSingle span{
+    font-size: 15px;
+    margin:auto;
+    background-color: rgb(5, 90, 37);
+    border-radius: 5px;
+    color: white;
+    padding: 5px 8px;
+}.listaProdutoSingle h4{
+    font-size: 15px;
+    background-color: rgb(5, 90, 37);
+    border-radius: 5px;
+    color: white;
+    padding: 5px 8px;
+    margin-right: 30%;
+}.listaProdutoSingle h5{
+    font-size: 15px;
+    background-color: rgb(5, 90, 37);
+    border-radius: 5px;
+    color: white;
+    padding: 5px 8px;
+    
+
+}
+.somaTotal {
+    background-color: green;
+    width: fit-content;
+    border-radius: 7px;
+    margin-top: 2px;
+    color: rgb(230, 230, 230);
+    
+}
+#zerar{
+    border-radius: 5px;
+    font-weight: bolder;
+    margin-left: 1px;
+    
+    
+}#zerar:hover{
+    background: orange;
+    box-shadow: 2px 2px 2px rgb(180, 118, 1);
+}#zerar:active{
+    background: rgb(143, 7, 2);
+    margin-top: 2px;
+    color: white;
+    box-shadow: 2px 2px 2px rgb(112, 30, 5);
+}#zerar img{
+    width: 20px;
+    padding: 2px 0px 0px;
+}
+    </style>
+    <header>
+        <h2>App Lista de SuperMercado</h2>
+    </header>
+    <div class="listaCadastro">
+        <input type="text" name="nomeProduto"  placeholder="Nome do Produto">
+        <input type="text" placeholder="Valor do protudo"  name="valorProduto">
+        <input type="number" placeholder="Unidades" name="unidades">
+        <input type="submit" name="acao" value="cadastrar" id="acao">
+    </div>
+
+    <div class="listaProdutos">
+       
+    </div>
+        <div class="somaTotal">
+            <h1>Total:R$0</h1>
+
+    </div>
+    <button name="limpar" id="zerar">Zerar Carrinho<img src="car.png"></button>
+    <script src="listaDeSupermercado.js"></script>   
+</body>
+</html>
